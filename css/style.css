@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,500&family=Roboto:wght@400;500;900&display=swap');
+
+:root {
+    --body-bg: url(/images/blurry-gradient-haikei.svg);
+    --header-bg: url(/images/wave-haikei.svg);
+
+    --title-font: 'Roboto', sans-serif;
+    --text-font: 'Open Sans', sans-serif;
+
+    --title-color: #2155CD;
+    --text-color: rgba(33, 85, 205, .7);
+}
+
+
+body {
+    background: var(--body-bg); 
+}
+
+.main__container {
+    background: var(--header-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+body,
+.main__container {
+    height: 100vh;
+    background-size: 100%;
+}
+
+.main__header {
+    border: 1px solid;
+    padding: 2.2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+}
+.main__header-title {
+    font-size: 3.8rem;
+    font-family: var(--title-font);
+    font-weight: 500;
+    color: var(--title-color);
+}
+.main__header-subtitle {
+    color: var(--text-color);
+    font-size: 1.35rem;
+}
