@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>Contact list</title>
 
     <script src="js/script.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <main class="main__container">
+      <header class="main__header">
+        <h1 class="main__header-title">Contact List Project</h1>
+        <hh2 class="main-__header-subtitle">by Fabio Aurora</hh2>
+      </header>
+
+      <section class="contact__container">
+        <div class="contact__info">
+          <div class="contact__name-container">
+            <label for="contactName">Name:</label>
+            <input type="text" id="contactName" />
+          </div>
+
+          <div class="contact__number-container">
+            <label for="contactNumber">Number:</label>
+            <input type="text" id="contactNumber" />
+          </div>
+
+          <div class="contact__btn-container">
+            <button>ADD</button>
+          </div>
+        </div>
+
+        <div class="contact__list-container">
+          <h2 class="contact__list-title">Contacts</h2>
+          <ul id="contactlist"></ul>
+        </div>
+      </section>
+
+      <section class="search__contact-container">
+        <div class="search__contact">
+          <label for="searchContact">Search</label>
+          <input type="text" id="searchContact" />
+        </div>
+        <div class="display__number-container">
+          <h2 class="display__number-title">Contact Info</h2>
+          <span id="displayName">Name</span>
+          <p id="displayInfo">Tel:</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
