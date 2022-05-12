@@ -20,6 +20,7 @@ body {
     background: var(--header-bg);
     display: flex;
     flex-direction: column;
+    gap: 5rem;
 }
 
 body,
@@ -46,4 +47,76 @@ body,
 .main__header-subtitle {
     color: var(--text-color);
     font-size: 1.35rem;
+}
+
+.contact__container {
+    display: flex;
+    align-self: center;
+    width: 800px;
+    background: rgba(33, 85, 205, .25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .18);
+}
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 2.5rem;
+    width: 70%;
+    padding: 2.8rem 1.3rem;
+}
+.contact__name-container,
+.contact__number-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+}
+
+.contact__input {
+    width: 350px;
+}
+
+
+/* style for the ADD btn */
+.contact__btn {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 14px 22px;
+    position: relative;
+}
+.contact__btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 40px));
+    width: 32px;
+    height: 32px;
+    background: #2155CD;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0,0,.5,2),
+    width .25s cubic-bezier(0,0,.5,2);
+    z-index: -1;
+}
+
+/* effect on Hover */
+.contact__btn:hover::before {
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0,0,.5,2),
+    width .25s .25s cubic-bezier(0,0,.5,2);
+}
+
+.contact__btn i {
+    margin-left: 14px;
+    color: #fff;
+    transition: transform .25s .4s cubic-bezier(0,0,.5,2);
+}
+.contact__btn:hover i {
+    transform: translateX(3px);
 }

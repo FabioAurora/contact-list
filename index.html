@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Contact list Project</title>
 
+    <script src="https://kit.fontawesome.com/5c34627e0f.js" crossorigin="anonymous"></script>
+
     <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -28,17 +30,18 @@
         <div class="contact__info">
           <div class="contact__name-container">
             <label for="contactName">Name:</label>
-            <input type="text" id="contactName" />
+            <input class="contact__input" type="text" id="contactName" />
           </div>
 
           <div class="contact__number-container">
             <label for="contactNumber">Number:</label>
-            <input type="text" id="contactNumber" />
+            <input class="contact__input" type="text" id="contactNumber" />
           </div>
 
-          <div class="contact__btn-container">
-            <button>ADD</button>
-          </div>
+          
+            <button class="contact__btn">
+              Acessar <i class="fa-solid fa-plus"></i>
+            </button>
         </div>
 
         <div class="contact__list-container">
