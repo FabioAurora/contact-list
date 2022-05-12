@@ -1,2 +1,4 @@
-# contact-list
-project
+# contact-list Project
+
+## Project layout
+
