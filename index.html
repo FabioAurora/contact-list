@@ -4,18 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Simple HTML/CSS/JS Contact list Project, to test what was learned in the last few modules of TheOdinProjec, you can use this code to help in your own projects, JS project">
-    <meta name="og:title" property="og:title" content="Contact List Project">
-    <meta property="og:description" content="Simple Contact List project with HTML/CSS/JS to aaply what I have learned in TheOdinProject, hope it helps you too.">
+    <meta
+      name="description"
+      content="Simple HTML/CSS/JS Contact list Project, to test what was learned in the last few modules of TheOdinProjec, you can use this code to help in your own projects, JS project"
+    />
+    <meta name="og:title" property="og:title" content="Contact List Project" />
+    <meta
+      property="og:description"
+      content="Simple Contact List project with HTML/CSS/JS to aaply what I have learned in TheOdinProject, hope it helps you too."
+    />
 
     <!-- CSS reset -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- main CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <title>Contact list Project</title>
 
-    <script src="https://kit.fontawesome.com/5c34627e0f.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5c34627e0f.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="js/script.js" defer></script>
   </head>
@@ -28,20 +43,31 @@
 
       <section class="contact__container">
         <div class="contact__info">
-          <div class="contact__name-container">
-            <label for="contactName">Name:</label>
-            <input class="contact__input" type="text" id="contactName" />
+          <div class="contact__input-container">
+            <input
+              class="contact__input"
+              type="text"
+              id="contactName"
+              placeholder=" "
+            />
+            <label class="contact__input-label" for="contactName">Name:</label>
           </div>
 
-          <div class="contact__number-container">
-            <label for="contactNumber">Number:</label>
-            <input class="contact__input" type="text" id="contactNumber" />
+          <div class="contact__input-container">
+            <input
+              class="contact__input"
+              type="text"
+              id="contactNumber"
+              placeholder=" "
+            />
+            <label class="contact__input-label" for="contactNumber"
+              >Number:</label
+            >
           </div>
 
-          
-            <button class="contact__btn">
-              Acessar <i class="fa-solid fa-plus"></i>
-            </button>
+          <button class="contact__btn">
+            ADD <i class="fa-solid fa-plus"></i>
+          </button>
         </div>
 
         <div class="contact__list-container">
@@ -61,6 +87,8 @@
           <p id="displayInfo">Tel:</p>
         </div>
       </section>
+
+      <div class="circle"></div>
     </main>
   </body>
 </html>
