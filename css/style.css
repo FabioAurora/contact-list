@@ -243,12 +243,19 @@ body,
     padding: .8rem;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    color: var(--clr-text-light);
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+#contactlist li{
+    margin-bottom: .6rem;
 }
 .contact__list-title {
     text-align: center;
     font-size: 1.25rem;
     font-weight: 900;
     color: var(--clr-text-light);
+    margin-bottom: 1.2rem;
 }
 
 .cards__search-container {
