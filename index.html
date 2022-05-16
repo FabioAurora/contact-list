@@ -38,7 +38,6 @@
     <main class="main__container">
       <header class="main__header">
         <h1 class="main__header-title">Contact List Project</h1>
-        <hh2 class="main__header-subtitle">by Fabio Aurora</hh2>
       </header>
 
       <section class="contact__container">
@@ -50,7 +49,7 @@
               id="contactName"
               placeholder=" "
             />
-            <label class="contact__input-label" for="contactName">Name:</label>
+            <label class="contact__input-label" for="contactName">Name</label>
           </div>
 
           <div class="contact__input-container">
@@ -61,7 +60,7 @@
               placeholder=" "
             />
             <label class="contact__input-label" for="contactNumber"
-              >Number:</label
+              >Number</label
             >
           </div>
 
@@ -70,6 +69,7 @@
           </button>
         </div>
 
+        <!-- where the list of names will appear -->
         <div class="contact__list-container">
           <h2 class="contact__list-title">Contacts</h2>
           <ul id="contactlist"></ul>
@@ -88,7 +88,11 @@
         </div>
       </section>
 
-      <div class="circle"></div>
+      <div class="circle__border">
+        <div class="circle"></div>
+      </div>
+
+      <div class="blur__circle"></div>
     </main>
   </body>
 </html>
