@@ -30,6 +30,7 @@
     <script
       src="https://kit.fontawesome.com/5c34627e0f.js"
       crossorigin="anonymous"
+      defer
     ></script>
 
     <script src="js/script.js" defer></script>
@@ -40,28 +41,21 @@
         <h1 class="main__header-title">Contact List Project</h1>
       </header>
 
-      <section class="contact__container">
+      <section class="cards">
         <div class="contact__info">
-          <div class="contact__input-container">
-            <input
-              class="contact__input"
-              type="text"
-              id="contactName"
-              placeholder=" "
-            />
-            <label class="contact__input-label" for="contactName">Name</label>
+          <div class="input-container">
+            <input class="input" type="text" id="contactName" placeholder=" " />
+            <label class="input-label" for="contactName">Name</label>
           </div>
 
-          <div class="contact__input-container">
+          <div class="input-container">
             <input
-              class="contact__input"
+              class="input"
               type="text"
               id="contactNumber"
               placeholder=" "
             />
-            <label class="contact__input-label" for="contactNumber"
-              >Number</label
-            >
+            <label class="input-label" for="contactNumber">Number</label>
           </div>
 
           <button class="contact__btn">
@@ -76,15 +70,25 @@
         </div>
       </section>
 
-      <section class="search__contact-container">
-        <div class="search__contact">
-          <label for="searchContact">Search</label>
-          <input type="text" id="searchContact" />
+      <!-- Search contact number -->
+      <section class="cards">
+        <div class="cards__search-container">
+          <div class="search__input-container">
+            <input
+              class="search-input"
+              type="text"
+              id="searchContact"
+              placeholder=" "
+            />
+            <label class="search-label" for="searchContact">Search</label>
+          </div>
+          <button class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
+
         <div class="display__number-container">
           <h2 class="display__number-title">Contact Info</h2>
           <span id="displayName">Name</span>
-          <p id="displayInfo">Tel:</p>
+          <p>Tel: <span id="displayInfo"></span></p>
         </div>
       </section>
 

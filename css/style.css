@@ -50,6 +50,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5rem;
     width: 90%;
     max-width: 1200px;
@@ -106,11 +107,6 @@ body,
 
 .main__header {
     padding: 2.2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.1rem;
 }
 .main__header-title {
     font-size: 3.1rem;
@@ -119,16 +115,18 @@ body,
     color: var(--clr-text-light);
 }
 
-.contact__container {
+.cards {
     display: flex;
-    align-self: center;
     background: var(--mini-cards-bg);
     width: 800px;
-    box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.27);
+    padding: .5rem 2rem;
+    border: 1px solid rgba(255, 255, 255, .3);
     backdrop-filter: blur(6px);
     border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, .3);
+    box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.27);
 }
+
+
 .contact__info {
     display: flex;
     flex-direction: column;
@@ -136,7 +134,7 @@ body,
     width: 60%;
     padding: 2.8rem 1.3rem;
 }
-.contact__input-container {
+.input-container {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -146,7 +144,7 @@ body,
     margin: 2rem 0;
 }
 
-.contact__input {
+.input {
     position: absolute;
     top: 0;
     left: 0;
@@ -161,21 +159,23 @@ body,
     padding: 1.15rem;
     background: none;
 }
-.contact__input:hover {
+.input:hover,
+.search-input:hover {
     border-color: var(--input-hover-clr);
 }
-.contact__input:focus {
+.input:focus,
+.search-input:focus {
     border-color: var(--input-hover-clr);
     box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.27);
     background: var(--input-focus-bg);
 }
-.contact__input:focus ~ .contact__input-label,
-.contact__input:not(:placeholder-shown).contact__input:not(:focus) ~ .contact__input-label {
+.input:focus ~ .input-label,
+.input:not(:placeholder-shown).input:not(:focus) ~ .input-label {
     top: -1.5rem;
     color: var(--clr-text-light);
 }
 
-.contact__input-label {
+.input-label {
     position: absolute;
     left: 1rem;
     top: .8rem;
@@ -248,5 +248,90 @@ body,
     text-align: center;
     font-size: 1.25rem;
     font-weight: 900;
-    color: var(--clr-primary-light);
+    color: var(--clr-text-light);
+}
+
+.cards__search-container {
+    display: flex;
+    width: 60%;
+    padding: 2.8rem 1.3rem;
+    margin: 2.5rem 0;
+}
+
+.search__input-container {
+    display: flex;
+    position: relative;
+    width: 18rem;
+    height: 2rem;
+    font-size: 1.25rem;
+}
+.search-input {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: .5rem;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--clr-text-darker);
+    outline: none;
+    padding: .5rem;
+    background: none;
+}
+.search-label{
+    position: absolute;
+    top: .6rem;
+    left: 1rem;
+    padding: 0 .5rem;
+    color: var(--clr-text-darker);
+    transition: 200ms ease-in;
+}
+
+.search-input:focus ~ .search-label,
+.search-input:not(:placeholder-shown).search-input:not(:focus) ~ .search-label {
+    top: -1.5rem;
+    color: var(--clr-text-light);
+}
+
+.search__btn {
+    font-size: 1.4rem;
+    color: var(--clr-text-light);
+    background: #F1658C;
+    border: none;
+    border-radius: .8rem;
+    padding: .5rem 4rem;
+    transition: all .1s;
+}
+.search__btn:hover{
+    background: #c96d87;
+}
+.search__btn:focus {
+    background: #C966A5;
+    box-shadow: 0 0 8px 0 white;
+}
+.search__btn i {
+    transition: transform 50ms ease-in;
+}
+.search__btn:hover i {
+    transform: scale(1.2);
+}
+
+.display__number-container {
+    background: var(--contactList-card-bg);
+    border: 4px solid rgba(197, 206, 214, 0.3);
+    width: 200px;
+    align-self: center;
+    padding: .8rem;
+    margin: 0 auto;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    color: var(--clr-text-light);
+}
+.display__number-title {
+    text-align: center;
+    font-family: var(--text-font);
+    font-weight: 900;
+    margin-bottom: .5rem;
+}
+
+#displayName ~ p {
+    margin-top: .5rem;
 }
