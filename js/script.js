@@ -9,20 +9,48 @@ const contactList = document.querySelector("#contactlist");
 
 const contacts = [];
 
+const searchContact = document.querySelector("#searchContact");
+const searchBTN = document.querySelector("#searchBTN");
+const displayNameInfo = document.querySelector("#displayName");
+const displayNumberInfo = document.querySelector("#displayInfo");
 
 // capitalize first letter:
 function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
 // adding contact to list:
-addBTN.addEventListener('click', () => {
-    contacts.push(`${addName.value}:${addNumber.value}`);
-    const newContact = document.createElement('li');
-    newContact.textContent = capitalizeFirstLetter(addName.value);
-    contactList.appendChild(newContact);
-    // resetting inputs:
-    addName.value = '';
-    addNumber.value = '';
-    addName.focus();
+addBTN.addEventListener("click", () => {
+  contacts.push(`${addName.value}:${addNumber.value}`);
+  const newContact = document.createElement("li");
+  newContact.textContent = capitalizeFirstLetter(addName.value);
+  contactList.appendChild(newContact);
+  // resetting inputs:
+  addName.value = "";
+  addNumber.value = "";
+  addName.focus();
+});
+
+// searching for contact number:
+searchBTN.addEventListener('click', () => {
+    for (let contact of contacts) {
+        const splitString = contact.split(':');
+        searchContact.value = searchContact.value.toLowerCase();
+
+        if (searchContact.value === splitString[0]) {
+            displayNameInfo.textContent = `${capitalizeFirstLetter(splitString[0])}`;
+            displayNumberInfo.textContent = `${splitString[1]}`
+            break;
+        }else {
+            displayNameInfo.textContent = `Contact not found`;
+            displayNumberInfo.textContent = ` `;
+        }
+    }
+    searchContact.value = '';
+})
+
+searchContact.addEventListener('click', () => {
+    if (displayNameInfo.textContent === 'Contact not found') {
+        displayNameInfo.textContent = 'Name';
+    }
 })
