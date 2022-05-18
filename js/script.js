@@ -48,9 +48,11 @@ searchBTN.addEventListener('click', () => {
     }
     searchContact.value = '';
 })
+const coisa = document.querySelector('#teste');
 
 searchContact.addEventListener('click', () => {
-    if (displayNameInfo.textContent === 'Contact not found') {
+    if ((displayNameInfo.textContent === 'Contact not found') || (displayNameInfo.textContent !== 'Name')) {
         displayNameInfo.textContent = 'Name';
+        displayNumberInfo.textContent = '';
     }
 })

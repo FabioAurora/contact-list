@@ -106,8 +106,12 @@ body,
 }
 
 .main__header {
+    width: 45ch;
     padding: 2.2rem 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
 .main__header-title {
     font-size: 3.1rem;
     font-family: var(--title-font);
@@ -200,6 +204,7 @@ body,
     border: none;
     padding: 14px 22px;
     position: relative;
+    cursor: pointer;
 }
 .contact__btn::before {
     content: '';
@@ -267,13 +272,12 @@ body,
 
 .search__input-container {
     display: flex;
-    position: relative;
-    width: 18rem;
-    height: 2rem;
+    width: 14rem;
+    height: 2.5rem;
     font-size: 1.25rem;
 }
 .search-input {
-    position: absolute;
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, .3);
     border-radius: .5rem;
     font-family: inherit;
@@ -282,6 +286,10 @@ body,
     outline: none;
     padding: .5rem;
     background: none;
+}
+.search-input::placeholder {
+    font-size: 1.4rem;
+    color: var(--clr-text-darker);
 }
 .search-label{
     position: absolute;
@@ -299,27 +307,49 @@ body,
 }
 
 .search__btn {
-    font-size: 1.4rem;
+    height: 3rem;
+    width: 8rem;
+    margin-left: 3.4rem;
+    border: 3px solid #F1658C;
+    background: transparent;
     color: var(--clr-text-light);
-    background: #F1658C;
-    border: none;
-    border-radius: .8rem;
-    padding: .5rem 4rem;
-    transition: all .1s;
+    font-weight: 800;
+    font-size: 1.4rem;
+    position: relative;
+    cursor: pointer;
+    transition: background .2s ease;
 }
-.search__btn:hover{
-    background: #c96d87;
+.search__btn:hover {
+    background: rgba(241, 101, 141, 0.37);
 }
-.search__btn:focus {
-    background: #C966A5;
-    box-shadow: 0 0 8px 0 white;
+.search__btn::before,
+.search__btn::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: .2s ease;
 }
-.search__btn i {
-    transition: transform 50ms ease-in;
+.search__btn::before {
+    left: -15px;
+    top: -15px;
+    border-width: 3px 0 0 3px;
 }
-.search__btn:hover i {
-    transform: scale(1.2);
+.search__btn::after {
+    right: -15px;
+    bottom: -15px;
+    border-width: 0 3px 3px 0 ;
 }
+.search__btn:hover::after,
+.search__btn:focus::after,
+.search__btn:hover::before, 
+.search__btn:focus::before{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+    background: rgba(241, 101, 141, 0.08);
+}
+
 
 .display__number-container {
     background: var(--contactList-card-bg);
