@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,500&family=Roboto+Slab:wght@100;400;700;900&display=swap');
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 :root {
     /* fonts */
     --title-font: 'Koulen', cursive;
@@ -35,7 +41,6 @@
     /* text colors */
     --clr-text-light: #adffff;
     --clr-text-darker: #b3c4c4;
-   
 }
 
 
@@ -52,9 +57,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 5rem;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
-    height: 85%;
     background: var(--main-card-bg);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .67);
     backdrop-filter: blur();
@@ -106,10 +110,7 @@ body,
 }
 
 .main__header {
-    width: 45ch;
     padding: 2.2rem 0;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .main__header-title {
@@ -121,6 +122,7 @@ body,
 
 .cards {
     display: flex;
+    flex-wrap: wrap;
     background: var(--mini-cards-bg);
     width: 800px;
     padding: .5rem 2rem;
@@ -153,7 +155,6 @@ body,
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     border: 1px solid rgba(255, 255, 255, .3);
     border-radius: .5rem;
     font-family: inherit;
@@ -242,8 +243,7 @@ body,
     background: var(--contactList-card-bg);
     border: 12px double rgba(197, 206, 214, 0.3);
     width: 200px;
-    height: 80%;
-    align-self: center;
+    align-self: flex-start;
     margin: 0 auto;
     padding: .8rem;
     border-top-right-radius: 2rem;
@@ -252,7 +252,7 @@ body,
     font-weight: 400;
     font-size: 1.3rem;
 }
-#contactlist li{
+#contactList li{
     margin-bottom: .6rem;
 }
 .contact__list-title {
@@ -288,22 +288,8 @@ body,
     background: none;
 }
 .search-input::placeholder {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--clr-text-darker);
-}
-.search-label{
-    position: absolute;
-    top: .6rem;
-    left: 1rem;
-    padding: 0 .5rem;
-    color: var(--clr-text-darker);
-    transition: 200ms ease-in;
-}
-
-.search-input:focus ~ .search-label,
-.search-input:not(:placeholder-shown).search-input:not(:focus) ~ .search-label {
-    top: -1.5rem;
-    color: var(--clr-text-light);
 }
 
 .search__btn {
@@ -371,4 +357,102 @@ body,
 
 #displayName ~ p {
     margin-top: .5rem;
+}
+
+/* Media queries */
+
+@media (max-width: 43rem) {
+    .main__container {
+        gap: 5rem;
+        width: 100%;
+        background: linear-gradient(45deg, #2D1E87, rgba(123, 116, 222, .7));
+        border-radius: 0;
+        border: none;
+    }
+
+    .circle__border {
+        display: none;
+    }
+    .circle {
+        display: none;
+    }
+    .blur__circle {
+        display: none;
+    }
+
+    .main__header-title {
+        font-size: 2.3rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        padding-bottom: 2.4rem;
+    }
+
+    /* contact btn */
+    .contact__info {
+        align-items: center;
+    }
+
+    .contact__btn {
+        background: var(--clr-add-btn);
+        padding: .7rem 2.6rem;
+        border-radius: 2rem;
+    }
+    .contact__btn:active {
+        box-shadow: 0 1px 13px 0 var(--clr-text-light);
+    }
+    .contact__btn::before {
+       display: none;
+    }
+    .contact__btn:hover::before {
+        display: none;
+    }
+    .contact__btn:hover i {
+        transform: translateX(0);
+    }
+
+    /* contact list display layout */
+    .contact__list-container,
+    .display__number-container {
+        border: 1px solid rgba(255, 255, 255, .3);
+        width: 20rem;
+        border-radius: .5rem;
+    }
+    .contact__list-title,
+    .display__number-title {
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+        width: 50%;
+        padding-bottom: .5rem;
+    }
+
+    /* search card */
+    .cards__search-container {
+        width: 100%;
+        padding: 2.8rem 1.7rem;
+        margin: 2.5rem 0;
+    }
+
+    .search-input::placeholder {
+        font-size: .9rem;
+    }
+
+    /* Search button */
+    .search__btn:active::after,
+    .search__btn:active::before {
+        width: calc(100% + 27px);
+        height: calc(100% + 27px);
+        background: rgba(241, 101, 141, 0.08);
+    }
+
+    #displayName ~ p {
+        margin-top: .7rem;
+    }
 }

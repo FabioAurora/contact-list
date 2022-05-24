@@ -5,7 +5,7 @@ let addName = document.querySelector("#contactName");
 let addNumber = document.querySelector("#contactNumber");
 const addBTN = document.querySelector("#addContactBTN");
 
-const contactList = document.querySelector("#contactlist");
+const contactList = document.querySelector("#contactList");
 
 const contacts = [];
 
