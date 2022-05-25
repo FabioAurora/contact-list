@@ -1,4 +1,4 @@
-"use strict"; // strict mode
+
 
 // Targeting the nodes:
 let addName = document.querySelector("#contactName");
@@ -7,7 +7,7 @@ const addBTN = document.querySelector("#addContactBTN");
 
 const contactList = document.querySelector("#contactList");
 
-let contacts = [];
+const contacts = [];
 
 const searchContact = document.querySelector("#searchContact");
 const searchBTN = document.querySelector("#searchBTN");
