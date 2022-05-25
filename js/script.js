@@ -32,22 +32,22 @@ addBTN.addEventListener("click", () => {
 });
 
 // searching for contact number:
-searchBTN.addEventListener('click', () => {
-    for (let contact of contacts) {
-        const splitString = contact.split(':');
-        searchContact.value = searchContact.value.toLowerCase();
+searchBTN.addEventListener("click", () => {
+  for (let contact of contacts) {
+    const splitString = contact.split(":");
+    searchContact.value = searchContact.value.toLowerCase();
 
-        if (searchContact.value === splitString[0]) {
-            displayNameInfo.textContent = `${capitalizeFirstLetter(splitString[0])}`;
-            displayNumberInfo.textContent = `${splitString[1]}`
-            break;
-        }else {
-            displayNameInfo.textContent = `Contact not found`;
-            displayNumberInfo.textContent = ` `;
-        }
+    if (searchContact.value === splitString[0]) {
+      displayNameInfo.textContent = `${capitalizeFirstLetter(splitString[0])}`;
+      displayNumberInfo.textContent = `${splitString[1]}`;
+      break;
+    } else {
+      displayNameInfo.textContent = `aiii aiiii`;
+      displayNumberInfo.textContent = ` `;
     }
-    searchContact.value = '';
-})
+  }
+  searchContact.value = "";
+});
 
 /* searchContact.addEventListener('click', () => {
     if ((displayNameInfo.textContent === 'Contact not found') || (displayNameInfo.textContent !== 'Name')) {
