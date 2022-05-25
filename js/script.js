@@ -1,8 +1,8 @@
 "use strict"; // strict mode
 
 // Targeting the nodes:
-let addName = document.querySelector("#contactName");
-let addNumber = document.querySelector("#contactNumber");
+var addName = document.querySelector("#contactName");
+var addNumber = document.querySelector("#contactNumber");
 const addBTN = document.querySelector("#addContactBTN");
 
 const contactList = document.querySelector("#contactList");
@@ -33,7 +33,7 @@ addBTN.addEventListener("click", () => {
 
 // searching for contact number:
 searchBTN.addEventListener('click', () => {
-    for (let contact of contacts) {
+    for (var contact of contacts) {
         const splitString = contact.split(':');
         searchContact.value = searchContact.value.toLowerCase();
 
