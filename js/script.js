@@ -32,7 +32,7 @@ addBTN.addEventListener("click", () => {
 });
 
 // searching for contact number:
-searchBTN.addEventListener('touch', () => {
+searchBTN.addEventListener('click', () => {
     for (let contact of contacts) {
         const splitString = contact.split(':');
         searchContact.value = searchContact.value.toLowerCase();
