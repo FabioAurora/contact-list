@@ -32,8 +32,7 @@ addBTN.addEventListener("click", () => {
 });
 
 // searching for contact number:
-searchBTN.addEventListener('click', (e) => {
-    e.preventDefault()
+searchBTN.addEventListener('click', () => {
     for (let contact of contacts) {
         const splitString = contact.split(':');
         searchContact.value = searchContact.value.toLowerCase();
@@ -50,9 +49,9 @@ searchBTN.addEventListener('click', (e) => {
     searchContact.value = '';
 })
 
-searchContact.addEventListener('click', () => {
+/* searchContact.addEventListener('click', () => {
     if ((displayNameInfo.textContent === 'Contact not found') || (displayNameInfo.textContent !== 'Name')) {
         displayNameInfo.textContent = 'Name';
         displayNumberInfo.textContent = '';
     }
-})
+}) */
