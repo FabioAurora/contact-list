@@ -455,4 +455,8 @@ body,
     #displayName ~ p {
         margin-top: .7rem;
     }
+
+    body {
+        display: block;
+    }
 }
