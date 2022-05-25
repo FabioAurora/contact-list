@@ -458,5 +458,6 @@ body,
 
     body {
         display: block;
+        height: auto;
     }
 }
