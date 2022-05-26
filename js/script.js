@@ -21,7 +21,7 @@ function capitalizeFirstLetter(string) {
 
 // adding contact to list:
 addBTN.addEventListener("click", () => {
-  contacts.push(`${addName.value.toLowerCase()}:${addNumber.value}`);
+  contacts.push(`${addName.value}:${addNumber.value}`);
   const newContact = document.createElement("li");
   newContact.textContent = capitalizeFirstLetter(addName.value);
   contactList.appendChild(newContact);
@@ -29,7 +29,6 @@ addBTN.addEventListener("click", () => {
   addName.value = "";
   addNumber.value = "";
   addName.focus();
-  console.log(contacts);
 });
 
 // searching for contact number:
