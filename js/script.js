@@ -29,7 +29,6 @@ addBTN.addEventListener("click", () => {
   addName.value = "";
   addNumber.value = "";
   addName.focus();
-  alert(contacts)
 });
 
 searchBTN.addEventListener('touchstart', process_touchstart, false);
@@ -37,19 +36,17 @@ searchBTN.addEventListener('touchstart', process_touchstart, false);
 function process_touchstart(){
   for (let contact of contacts) {
     const splitString = contact.split(":");
-    searchContact.value = searchContact.value.toLowerCase();
 
     if (searchContact.value === splitString[0]) {
       displayNameInfo.textContent = `${capitalizeFirstLetter(splitString[0])}`;
       displayNumberInfo.textContent = `${splitString[1]}`;
       break;
     } else {
-      displayNameInfo.textContent = `Contact not found!!`;
+      displayNameInfo.textContent = `Contact not found!!!!!!`;
       displayNumberInfo.textContent = ` `;
     }
   }
   searchContact.value = "";
-  alert(contacts)
 }
 
 // searching for contact number:
