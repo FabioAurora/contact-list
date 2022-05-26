@@ -43,7 +43,7 @@ function process_touchstart(){
       displayNumberInfo.textContent = `${splitString[1]}`;
       break;
     } else {
-      displayNameInfo.textContent = `duss ssss`;
+      displayNameInfo.textContent = `Contact not found!!`;
       displayNumberInfo.textContent = ` `;
     }
   }
