@@ -29,16 +29,15 @@ addBTN.addEventListener("click", () => {
   addName.value = "";
   addNumber.value = "";
   addName.focus();
-  console.log(contacts)
+  console.log(contacts);
 });
 
 // searching for contact number:
 searchBTN.addEventListener("click", () => {
   for (let contact of contacts) {
     const splitString = contact.split(":");
-    const stringLowerCase = contact.value.toLowerCase()
 
-    if (stringLowerCase === splitString[0]) {
+    if (searchContact.value === splitString[0]) {
       displayNameInfo.textContent = `${capitalizeFirstLetter(splitString[0])}`;
       displayNumberInfo.textContent = `${splitString[1]}`;
       break;
@@ -50,3 +49,12 @@ searchBTN.addEventListener("click", () => {
   searchContact.value = "";
 });
 
+searchContact.addEventListener("click", () => {
+  if (
+    displayNameInfo.textContent === "Contact not found" ||
+    displayNameInfo.textContent !== "Name"
+  ) {
+    displayNameInfo.textContent = "Name";
+    displayNumberInfo.textContent = "";
+  }
+});
