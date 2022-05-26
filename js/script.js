@@ -31,8 +31,9 @@ addBTN.addEventListener("click", () => {
   addName.focus();
 });
 
-// searching for contact number:
-searchBTN.addEventListener("click", () => {
+searchBTN.addEventListener('touchstart', process_touchstart, false);
+
+function process_touchstart(){
   for (let contact of contacts) {
     const splitString = contact.split(":");
     searchContact.value = searchContact.value.toLowerCase();
@@ -42,12 +43,30 @@ searchBTN.addEventListener("click", () => {
       displayNumberInfo.textContent = `${splitString[1]}`;
       break;
     } else {
-      displayNameInfo.textContent = `aiii aiiii`;
+      displayNameInfo.textContent = `duss ssss`;
       displayNumberInfo.textContent = ` `;
     }
   }
   searchContact.value = "";
-});
+}
+
+// searching for contact number:
+/* searchBTN.addEventListener("click", () => {
+  for (let contact of contacts) {
+    const splitString = contact.split(":");
+    searchContact.value = searchContact.value.toLowerCase();
+
+    if (searchContact.value === splitString[0]) {
+      displayNameInfo.textContent = `${capitalizeFirstLetter(splitString[0])}`;
+      displayNumberInfo.textContent = `${splitString[1]}`;
+      break;
+    } else {
+      displayNameInfo.textContent = `duss ssss`;
+      displayNumberInfo.textContent = ` `;
+    }
+  }
+  searchContact.value = "";
+}); */
 
 /* searchContact.addEventListener('click', () => {
     if ((displayNameInfo.textContent === 'Contact not found') || (displayNameInfo.textContent !== 'Name')) {
