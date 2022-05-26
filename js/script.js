@@ -50,12 +50,3 @@ searchBTN.addEventListener("click", () => {
   searchContact.value = "";
 });
 
-searchContact.addEventListener("click", () => {
-  if (
-    displayNameInfo.textContent === "Contact not found" ||
-    displayNameInfo.textContent !== "Name"
-  ) {
-    displayNameInfo.textContent = "Name";
-    displayNumberInfo.textContent = "";
-  }
-});
