@@ -32,26 +32,21 @@ addBTN.addEventListener("click", () => {
 });
 
 // searching for contact number:
-searchBTN.addEventListener('touchstart', process_touchstart, false);
-
-function process_touchstart(){
+searchBTN.addEventListener("click", () => {
   for (let contact of contacts) {
     const splitString = contact.split(":");
-    const stringToLowerCase = searchContact.value.toLowerCase();
 
-    if (stringToLowerCase === splitString[0]) {
+    if (searchContact.value === splitString[0]) {
       displayNameInfo.textContent = `${capitalizeFirstLetter(splitString[0])}`;
       displayNumberInfo.textContent = `${splitString[1]}`;
       break;
     } else {
-      displayNameInfo.textContent = `Contact not found!!`;
+      displayNameInfo.textContent = `Contact not found!!!`;
       displayNumberInfo.textContent = ` `;
     }
   }
   searchContact.value = "";
-}
-
-
+});
 
 /* searchContact.addEventListener('click', () => {
     if ((displayNameInfo.textContent === 'Contact not found') || (displayNameInfo.textContent !== 'Name')) {
