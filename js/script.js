@@ -29,6 +29,7 @@ addBTN.addEventListener("click", () => {
   addName.value = "";
   addNumber.value = "";
   addName.focus();
+  alert(contacts)
 });
 
 searchBTN.addEventListener('touchstart', process_touchstart, false);
@@ -48,6 +49,7 @@ function process_touchstart(){
     }
   }
   searchContact.value = "";
+  alert(contacts)
 }
 
 // searching for contact number:
