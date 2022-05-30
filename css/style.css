@@ -65,6 +65,7 @@ body {
     border-radius: 2rem;
     border: 1px solid rgba(255, 255, 255, .4);
     overflow: hidden;
+    padding-bottom: 3.2rem;
 }
 
 .circle__border {
@@ -368,6 +369,7 @@ body,
         background: linear-gradient(45deg, #2D1E87, rgba(123, 116, 222, .7));
         border-radius: 0;
         border: none;
+        padding-bottom: 0;
     }
 
     .circle__border {
