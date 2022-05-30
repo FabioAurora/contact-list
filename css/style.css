@@ -363,7 +363,7 @@ body,
 
 @media (max-width: 43rem) {
     .main__container {
-        gap: 5rem;
+        gap: 2.1rem;
         width: 100%;
         background: linear-gradient(45deg, #2D1E87, rgba(123, 116, 222, .7));
         border-radius: 0;
