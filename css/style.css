@@ -242,13 +242,12 @@ body,
 
 .contact__list-container {
     background: var(--contactList-card-bg);
-    border: 12px double rgba(197, 206, 214, 0.3);
-    width: 200px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    width: 18rem;
     align-self: flex-start;
-    margin: 0 auto;
+    margin-top: .8rem;
     padding: .8rem;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border-radius: .5rem;
     color: var(--clr-text-light);
     font-weight: 400;
     font-size: 1.3rem;
@@ -340,13 +339,12 @@ body,
 
 .display__number-container {
     background: var(--contactList-card-bg);
-    border: 4px solid rgba(197, 206, 214, 0.3);
-    width: 200px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    width: 12rem;
     align-self: center;
     padding: .8rem;
     margin: 0 auto;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border-radius: .5rem;
     color: var(--clr-text-light);
 }
 .display__number-title {
@@ -426,6 +424,7 @@ body,
         border: 1px solid rgba(255, 255, 255, .3);
         width: 20rem;
         border-radius: .5rem;
+        margin: 0 auto;
     }
     .contact__list-title,
     .display__number-title {

@@ -31,6 +31,16 @@ addBTN.addEventListener("click", () => {
   addName.focus();
 });
 
+addNumber.addEventListener("input", () => {
+  if (!Number(addNumber.value)) {
+    addNumber.setCustomValidity('Invalid number!!!');
+    addNumber.value = '';
+    return addNumber.reportValidity()
+  }else {
+    addNumber.setCustomValidity('');
+  }
+})
+
 // searching for contact number:
 searchBTN.addEventListener("click", () => {
   for (let contact of contacts) {
