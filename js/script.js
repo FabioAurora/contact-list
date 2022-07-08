@@ -21,7 +21,7 @@ function capitalizeFirstLetter(string) {
 
 // adding contact to list:
 addBTN.addEventListener("click", () => {
-  contacts.push(`${addName.value}:${addNumber.value}`);
+  contacts.push(`${addName.value.toLowerCase()}:${addNumber.value}`);
   const newContact = document.createElement("li");
   newContact.textContent = capitalizeFirstLetter(addName.value);
   contactList.appendChild(newContact);
@@ -46,7 +46,7 @@ searchBTN.addEventListener("click", () => {
   for (let contact of contacts) {
     const splitString = contact.split(":");
 
-    if (searchContact.value === splitString[0]) {
+    if (searchContact.value.toLowerCase() === splitString[0]) {
       displayNameInfo.textContent = `${capitalizeFirstLetter(splitString[0])}`;
       displayNumberInfo.textContent = `${splitString[1]}`;
       break;
