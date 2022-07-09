@@ -31,6 +31,22 @@ addBTN.addEventListener("click", () => {
   addName.focus();
 });
 
+// Validating name input
+addName.addEventListener('input', () => {
+  let letters = /^[A-Za-z]+$/;
+   if(addName.value.match(letters))
+     {
+      return true;
+     }
+   else
+     {
+     addName.setCustomValidity('Invalid Name!!!')
+     addName.value = '';
+    return addName.reportValidity()
+     }
+})
+
+// validating number input
 addNumber.addEventListener("input", () => {
   if (!Number(addNumber.value)) {
     addNumber.setCustomValidity('Invalid number!!!');
